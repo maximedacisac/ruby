@@ -11,6 +11,11 @@ class UsersController < ApplicationController
    
   end
 
+  def update_roles
+    User.update_all(role: 'admin')
+    redirect_to users_path, notice: 'Tous les utilisateurs sont maintenant des administrateurs.'
+  end
+
   def new
     @users = User.new
   end

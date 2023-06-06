@@ -2,6 +2,9 @@
 
 <h1>Products</h1>
 
+<%= button_to 'Extraction', export_products_path(format: :csv), method: :patch, class: "fa fa-plus btn btn-success"%>
+<%= button_to 'Extraction json', products_path(format: :json), method: :get, class: "fa fa-plus btn btn-success"%>
+
 <div class="mt-4">
   <%= form_tag products_path, method: :get, class: "form-inline justify-content-center" do %>
     <%= text_field_tag :search, params[:search], class: "form-control mr-2", placeholder: "Search" %>

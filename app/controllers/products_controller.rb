@@ -1,3 +1,5 @@
+require 'csv'
+
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show edit update destroy ]
 
@@ -8,13 +10,24 @@ class ProductsController < ApplicationController
     else
       @products = Product.all
     end
+
+    respond_to do |format|
+      format.html
+      format.json
+    end
   end
 
   # GET /products/1 or /products/1.json
   def show
   end
 
-  
+  def export_csv
+    @products = Product.all
+
+    respond_to do |format|
+      format.csv { send_data generate_csv(@products), filename: "products.csv" }
+    end
+  end
 
   # GET /products/new
   def new
@@ -75,5 +88,15 @@ class ProductsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def product_params
       params.require(:product).permit(:name, :number, :client_id, :etat, :deliveryDate, :onSite)
+    end
+
+    def generate_csv(products)
+      CSV.generate(headers: true) do |csv|
+        csv << ["Name", "Number"] # Ajoute les en-têtes des colonnes
+  
+        products.each do |product|
+          csv << [product.name, product.number] # Ajoute les données de chaque produit
+        end
+      end
     end
 end
