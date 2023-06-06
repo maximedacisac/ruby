@@ -1,0 +1,22 @@
+
+<%= simple_form_for(@product) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :name %>
+    <%= f.input :number %>
+    <%= f.input :etat, as: :radio_buttons, collection: Product::ETATPRODUCT, checked: @product.etat || Product::ETATPRODUCT.first %>
+    <%= f.input :deliveryDate, as: :date, html5: true %>
+    <%= f.input :onSite %>
+    <%= f.association :client, collection: @clients,
+    :label_method => :lastname,
+    :value_method => :id,
+    :label => "Client" 
+    %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

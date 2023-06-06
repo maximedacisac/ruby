@@ -1,0 +1,15 @@
+current directory: /home/maxime/Documents/ruby/exmpel_projet_rubyonrails7/vendor/cache/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20230605-46375-18r3g8p.rb extconf.rb
+creating Makefile
+
+current directory: /home/maxime/Documents/ruby/exmpel_projet_rubyonrails7/vendor/cache/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /home/maxime/Documents/ruby/exmpel_projet_rubyonrails7/vendor/cache/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/maxime/Documents/ruby/exmpel_projet_rubyonrails7/vendor/cache/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20230605-46375-1mmj9jp/skiptrace/internal

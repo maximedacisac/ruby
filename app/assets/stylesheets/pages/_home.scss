@@ -1,0 +1,16 @@
+// Specific CSS for your home-page
+.card-home {
+    background: $grey-light;
+    font-weight: bolder;
+    padding: 0 3px;
+    margin: 3px;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  .card-home:hover {
+    background: $grey-medium;
+  }

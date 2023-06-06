@@ -1,0 +1,8 @@
+current directory: /home/maxime/Documents/ruby/exmpel_projet_rubyonrails7/vendor/bundle/ruby/2.7.0/gems/racc-1.6.2/ext/racc/cparse
+/usr/bin/ruby2.7 -I /usr/lib/ruby/2.7.0 -r ./siteconf20230605-45649-1kfszxn.rb extconf.rb
+mkmf.rb can't find header files for ruby at /usr/lib/ruby/include/ruby.h
+
+You might have to install separate package for the ruby development
+environment, ruby-dev or ruby-devel for example.
+
+extconf failed, exit code 1

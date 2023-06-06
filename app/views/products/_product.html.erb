@@ -1,0 +1,31 @@
+<div id="<%= dom_id product %>">
+  <h3>
+    <%= product.name %>
+  </h3>
+
+  <p>
+    <strong>Number:</strong>
+    <%= product.number %>
+    </p>
+    <strong>Etat:</strong>
+    <%= product.etat %>
+    </p>
+    <p><strong>Date livraison:</strong>
+    <%= product.deliveryDate %>
+    </p>
+    <p>
+    <strong>Sur site:</strong>
+    <%= product.onSite %>
+  </p>
+
+  <p>
+    <strong>Client:</strong>
+    <%= product.client.username %>
+  </p>
+
+    <p>
+      <%= link_to "Show this product", product %>
+    </p>
+  <%= button_to "Supprimer", product, method: :delete %>
+
+</div>
